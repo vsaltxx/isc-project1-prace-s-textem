@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 
-char namesCh[100]; //edited array of names ; namesCh contains numbers that represent the characters of the name
+//edited array of names ; namesCh contains numbers that represent the characters of the name
+char namesCh[100]; 
 
-char KB[10][5] = { //KB - KeyBoard
+//KB - KeyBoard
+char KB[10][5] = { 
         "+",
         "",
         "abc",
@@ -47,7 +49,8 @@ void editReg(char *names) {
     return;
 }
 
-void namesToChar(char *names) //this is where our name comes in
+//this is where our name comes in
+void namesToChar(char *names) 
 {
     int len = (int) strlen(names);
 
@@ -57,7 +60,7 @@ void namesToChar(char *names) //this is where our name comes in
    {
        for (int j = 0; j < 10; j++)
        {
-           if (names[i] == ' ') // gap check -- проверка на пробел
+           if (names[i] == ' ') // gap check 
            {
                namesCh[i] = ' '; // found - writes a space character in the modified array
                break;
